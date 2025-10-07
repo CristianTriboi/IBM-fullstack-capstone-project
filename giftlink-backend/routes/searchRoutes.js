@@ -29,7 +29,7 @@ router.get('/', async (req, res, next) => {
             query.age_years = { $lte: parseInt(req.query.age_years) };
         }
 
-        const gifts = await collection.find(query).toArray()
+        const gifts = await collection.find(query).toArray();
 
         res.json(gifts);
     } catch (e) {
